@@ -42,14 +42,12 @@ public class Main {
                     System.out.println("Shopping list is empty");
                 }else
                 {
-                    StringBuilder sb = new StringBuilder();
                     for (Map.Entry<Product, Integer> entry : shoppingList.entrySet()) {
-                        sb.append(String.format("%s (ID %d): %d\n",
+                        System.out.println(String.format("%s (ID %d): %d",
                                 entry.getKey().getName(),
                                 entry.getKey().getId(),
                                 entry.getValue()));
-                    };
-                    System.out.println(sb.toString());
+                    }
                 }
             } else if(command.startsWith("exit")){
                 break;
